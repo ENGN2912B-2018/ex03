@@ -1,3 +1,5 @@
+#include <cstdlib>      // provides atof()
+#include <stdio.h>      // provides printf()
 #include <iostream>     // provides cout, cin, precision, fixed, scientific
 //#include <iomanip>      // provides setprecision, setwidth
 #include <string>       // provides 'string()'
@@ -30,7 +32,7 @@ int main(int nargc, char* argv[])
         cout << endl << string(40,'*') << endl << "v = " << v << endl;
 
         // the following commands may only be performed on positive values
-        if (v >= 0) {
+        if (v > 0) {
             // compute ln(v) - natural log
             cout << "ln(v)       = " << log(v) << endl;
 
@@ -43,7 +45,7 @@ int main(int nargc, char* argv[])
             // compute ln(v)/ln(2)
             cout << "ln(v)/ln(2) = " << (log(v)/log(2)) << endl;
         } else {
-            sprintf("Warning:  Value entered (%f) was negative!\n", v)
+            printf("Warning:  Value entered (%f) must be positive!\n", v);
         }
 
         // compute double log2(|v|)

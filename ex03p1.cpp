@@ -1,3 +1,4 @@
+#include <cstdlib>      // provides atof()
 #include <iostream>     // provides cout, cin, precision, fixed, scientific
 //#include <iomanip>      // provides setprecision, setwidth
 #include <string>       // provides 'string()'
